@@ -4,10 +4,14 @@ import React, { Fragment, useState } from "react";
 export const Pregunta = () => {
   const [cantidad, guardarCantidad] = useState(0);
 
+  const agregandoPresupuesto = e =>{
+      e.preventDefault();
+      
+  }
   return (
     <Fragment>
       <h2>Coloca tu presupuesto</h2>
-      <form>
+      <form onSubmit={agregandoPresupuesto}>
         <input
           type="number"
           className="u-full-width"
