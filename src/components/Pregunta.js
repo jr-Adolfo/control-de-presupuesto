@@ -2,7 +2,7 @@
 import React, { Fragment, useState } from "react";
 import Error from "./Error"
 
-export const Pregunta = ({guardarPresupuesto, guardarRestante}) => {
+export const Pregunta = ({guardarPresupuesto, guardarRestante, actualizarPregunta}) => {
   const [cantidad, guardarCantidad] = useState(0);
 
   const [error, guardarError] = useState(false)
@@ -19,6 +19,7 @@ export const Pregunta = ({guardarPresupuesto, guardarRestante}) => {
 
       guardarPresupuesto(cantidad)
       guardarRestante(cantidad)
+      actualizarPregunta(false)
 
   }
   return (
