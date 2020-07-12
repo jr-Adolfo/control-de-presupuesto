@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const Listado = () => (
-    <div className="gastos-realizados">
-        <h2>Listado</h2>
-    </div>
+const Listado = ({ gastos }) => (
+  <div className="gastos-realizados">
+    <h2>Listado</h2>
+    {gastos.map((gasto) => console.log(gasto))}
+  </div>
 );
- 
+
 export default Listado;
