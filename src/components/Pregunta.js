@@ -1,5 +1,6 @@
 // @flow
 import React, { Fragment, useState } from "react";
+import Error from "./Error"
 
 export const Pregunta = () => {
   const [cantidad, guardarCantidad] = useState(0);
@@ -20,7 +21,7 @@ export const Pregunta = () => {
   return (
     <Fragment>
       <h2>Coloca tu presupuesto</h2>
-      {error ? 'error' : null}
+      {error ? <Error mensaje="El Presupuesto es incorrecto"/> : null}
       <form onSubmit={agregandoPresupuesto}>
         <input
           type="number"
