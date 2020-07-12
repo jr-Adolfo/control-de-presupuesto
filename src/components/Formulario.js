@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Error from "./Error";
-import shortid from 'shortid';
+import shortid from "shortid";
 
-const Formulario = ({agregandoNuevoGasto}) => {
+const Formulario = ({ agregandoNuevoGasto }) => {
   const [nombre, guardarNombre] = useState("");
   const [cantidad, guardarCantidad] = useState(0);
   const [error, guardarError] = useState(false);
@@ -16,15 +16,17 @@ const Formulario = ({agregandoNuevoGasto}) => {
     }
 
     guardarError(false);
-    
-    const gasto = {
-        nombre,
-        cantidad,
-        id: shortid.generate()
-    }
 
-    agregandoNuevoGasto(gasto)
-    
+    const gasto = {
+      nombre,
+      cantidad,
+      id: shortid.generate(),
+    };
+
+    agregandoNuevoGasto(gasto);
+    //Limpiando form
+    guardarNombre("");
+    guardarCantidad(0);
   };
 
   return (
