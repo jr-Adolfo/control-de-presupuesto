@@ -23,7 +23,7 @@ function App() {
     }
 
     // guardarCrearGasto(false);
-  }, [gasto]);
+  }, [gasto, gastos, restante, creargasto]);
   // const agregandoNuevoGasto = (gasto) => {
   //   guardarGastos([...gastos, gasto]);
   // };
