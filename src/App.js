@@ -22,8 +22,8 @@ function App() {
       guardarRestante(presupuestoRestante);
     }
 
-    // guardarCrearGasto(false);
-  }, [gasto, gastos, restante, creargasto]);
+    guardarCrearGasto(false);
+  }, [gasto, restante, gastos, creargasto]);
   // const agregandoNuevoGasto = (gasto) => {
   //   guardarGastos([...gastos, gasto]);
   // };
